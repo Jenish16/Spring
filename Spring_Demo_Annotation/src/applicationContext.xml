@@ -13,35 +13,12 @@
 		<property name="rootLoggerLevel" value="FINE" />
 		<property name="printedLoggerLevel" value="FINE" />
 	</bean>
-
-	<!-- Load properties file -->
-	<context:property-placeholder
-		location="classpath:sport.properties" />
 	
-	<!-- define the dependency -->
-
-	<bean id="myFortune"
-		class="com.jen.spring.demo.HappyFortuneService">
-	</bean>
-
-
-
-	<!-- Define your beans here -->
-
-	<bean id="myCoach" class="com.jen.spring.demo.TrackCoach">
-		<constructor-arg ref="myFortune" />
-	</bean>
-	<bean id="myCricketCoach" class="com.jen.spring.demo.CricketCoach">
-		<!-- set up setter injection -->
-		<property name="fortuneService" ref="myFortune" />
-		<!-- inject literal values -->
-		<property name="emailAddress" value="${jen.email}" />
-		<property name="team" value="${jen.team}" />
-	</bean>
-
-	<!-- <bean id="myCoach" class="com.jen.spring.demo.BaseBallCoach"> <constructor-arg 
-		ref="myFortune"/> </bean> -->
-
+	<!-- Add and value to component scanning -->
+	<context:component-scan base-package="com.jen.spring.annotation"/>
+	
+	
+	
 </beans>
 
 
