@@ -17,6 +17,7 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 @ComponentScan("com.jen.spring.annotation")
 @PropertySource("classpath:mylogger.properties")
+@PropertySource("classpath:sport.properties")
 public class SportConfig {
 	
 	//Define method for sad fortune

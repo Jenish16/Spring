@@ -19,6 +19,9 @@ public class TennisCoach implements Coach {
 	@Value("${jen.email}")
 	private String email;
 	
+	@Value("${jen.team}")
+	private String team;
+	
 	
 //	@Autowired
 //	//@Qualifier("happyFortuneService")
@@ -49,6 +52,12 @@ public class TennisCoach implements Coach {
 	{
 		return email;
 	}
+	
+	public String getTeam()
+	{
+		return team;
+	}
+
 
 	//define my init method
 	@PostConstruct
