@@ -10,5 +10,9 @@
 	<h3>Hello world of spring</h3>
 	<br><br>
 	Student Name : ${param.studentName}
+	
+	<br><br>
+	The message : ${message}
+	
 </body>
 </html>

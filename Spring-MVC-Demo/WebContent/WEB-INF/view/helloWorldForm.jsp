@@ -7,7 +7,7 @@
 <title>Hello World - Input Form</title>
 </head>
 <body>
-	<form action="processForm" method="get">
+	<form action="processFormVersionThree" method="get">
 		<label>Name:</label>
 		<input type = "text" name="studentName" placeholder="Enter Name"/>
 		<input type = "submit"/>
