@@ -19,6 +19,9 @@ public class OneToOneDemo {
 		
 		Session session = sf.getCurrentSession();
 		try {
+			session.beginTransaction();
+			//Uni Directional
+			
 //			Instructor tempInstructor = 
 //					new Instructor("Jenish","Vaghasia","jenishvaghasia@gmail.com");
 //			
@@ -34,27 +37,44 @@ public class OneToOneDemo {
 			
 //			tempInstructor.setInstructorDetail(tempoInstructorDetail);
 			
-			
-			session.beginTransaction();
-			
+				
 //			session.save(tempInstructor);
 			
-			int theId =4 ;
-			Instructor tempInstructor = session.get(Instructor.class, theId);
+//			int theId =2 ;
+//			Instructor tempInstructor = session.get(Instructor.class, theId);
+//			
+//			System.out.println(tempInstructor);
+//			if(tempInstructor != null) {
+//				session.delete(tempInstructor);
+//			}
 			
-			System.out.println(tempInstructor);
-			if(tempInstructor != null) {
-				session.delete(tempInstructor);
-			}
-						
-
+			//Bi Directional
 			
+//			Instructor tempInstructor = 
+//					new Instructor("abc","xyz","abcxyz@gmail.com");
+//			
+//			InstructorDetail tempInstructorDetail =
+//					new InstructorDetail("http://asdqwe.com/youtube","zzzzzz");
+//			tempInstructorDetail.setInstructor(tempInstructor);
+//			
+//			session.save(tempInstructorDetail);
+			
+			int theId = 6 ;
+			InstructorDetail tempInstructorDetail = session.get(InstructorDetail.class, theId);
+			
+			System.out.println(tempInstructorDetail);
+			System.out.println(tempInstructorDetail.getInstructor());
+			
+			session.delete(tempInstructorDetail);
 			
 			session.getTransaction().commit();
 			
 			
 			
+		}catch(Exception exc) {
+			exc.printStackTrace();
 		}finally {
+			session.close();
 			sf.close();
 		}
 		
