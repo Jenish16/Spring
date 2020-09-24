@@ -20,19 +20,20 @@
 		<h3>Save Customer</h3>
 		
 		<form:form action="saveCustomer" modelAttribute="customer" method="POST"> 
+			<form:hidden path="id"/>
 			<table>
 				<tbody>
 					<tr>
 						<td><lable>First Name:</lable></td>
-						<td><form:input path="firstName"/></td>
+						<td><form:input path="firstName"/><form:errors path="firstName" cssClass="error"/></td>
 					</tr>
 					<tr>
 						<td><lable>Last Name:</lable></td>
-						<td><form:input path="lastName"/></td>
+						<td><form:input path="lastName"/><form:errors path="lastName" cssClass="error"/></td>
 					</tr>
 					<tr>
 						<td><lable>E-mail:</lable></td>
-						<td><form:input path="email"/></td>
+						<td><form:input path="email"/><form:errors path="email" cssClass="error"/></td>
 					</tr>
 					<tr>
 						<td></td>
