@@ -16,7 +16,8 @@ public class MainDemoApp {
 		MembershipDAO theMembershipDao = context.getBean("membershipDAO", MembershipDAO.class);
 		
 		Account theAccount = new Account();	
-		
+		theAccount.setName("Jenish");
+		theAccount.setLevel("Pro");
 		
 		theAccoutDao.addAccount(theAccount, false);
 		
