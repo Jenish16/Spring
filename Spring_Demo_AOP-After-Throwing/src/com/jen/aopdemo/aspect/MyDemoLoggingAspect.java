@@ -3,7 +3,9 @@ package com.jen.aopdemo.aspect;
 import java.util.List;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -30,6 +32,32 @@ public class MyDemoLoggingAspect {
 		System.out.println("\n=====>>> Result is : "+result);
 		
 		convertAccountNamesToUpperCase(result);
+		
+	}
+	
+	@AfterThrowing(
+			pointcut = "execution(* com.jen.aopdemo.dao.AccountDAO.findAccounts(..))",
+			throwing = "theExc")
+	public void afterThrowingFindAccountsAdvice(
+			JoinPoint theJoinPoint , Throwable theExc) {
+		
+		String method = theJoinPoint.getSignature().toShortString();
+		
+		System.out.println("\n=====>>>Executing AfterThrowing on method:"+method);
+		
+		System.out.println("\n=====>>> Exception is : "+theExc);
+	
+		
+	}
+	
+	@After("execution(* com.jen.aopdemo.dao.AccountDAO.findAccounts(..))")
+	public void afterFinallyFindAccountsAdvice(JoinPoint theJoinPoint) {
+		
+		String method = theJoinPoint.getSignature().toShortString();
+		
+		System.out.println("\n=====>>>Executing After(finally) on method:"+method);
+		
+	
 		
 	}
 	
