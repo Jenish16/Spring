@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Spring_Demo_AOP-Pointcut-Order</name>
+	<name>Spring_Demo_AOP-Pointcut-Order-JoinPoint</name>
 	<comment></comment>
 	<projects>
 	</projects>
