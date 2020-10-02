@@ -10,11 +10,12 @@
 
 <hr>
 
-<p>
-	See you in Hogwarts ... for our annual Leadership retreat!
-	<br>
-	Keep this trip a secret, don't tell the regular employees LOL :-)
-</p>
+
+	<p>
+		See you in Hogwarts ... for our annual Leadership retreat!
+		<br>
+		Keep this trip a secret, don't tell the regular employees LOL :-)
+	</p>
 
 <hr>
 
