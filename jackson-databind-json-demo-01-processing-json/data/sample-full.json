@@ -1,0 +1,15 @@
+{
+	"id": 16,
+	"firstName": "Jenish",
+	"lastName": "Vaghasia",
+	"active": true,
+	"address": {
+		"street": "B/H Patelvadi",
+		"city": "Bagasara",
+		"state": "Gujarat",
+		"pin": "365440",
+		"country": "India"
+	},
+	"languages" : ["Java", "C++", "Python", "Javascript"],
+	"company" : "fire with ice"
+}
